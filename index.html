@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+SPDX-FileCopyrightText: 2012 - 2021 Jerzy Głowacki <jerzyglowacki@gmail.com>
+SPDX-FileCopyrightText: 2024 Robin Vobruba <hoijui.quaero@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Git-Forge HTML Preview</title>
+	<style>
+	body {
+		font: 12px 'Helvetica Neue', Helvetica, Arial, freesans, clean, sans-serif;
+		color: #333;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	a {
+		color: #666;
+	}
+	#previewform {
+		display: none;
+		padding: 20px;
+		text-align: center;
+	}
+	strong {
+		color: #333;
+		background-color: #FAFFA6;
+		padding: 0.1em;
+	}
+	#footer {
+		margin: 20px 0;
+		font-size: 10px;
+		color: #666;
+	}
+	</style>
+</head>
+<body>
+	<form id="previewform" onsubmit="location.href='/?url='+this.file.value;return false">
+		<h1>Git-Forge HTML Preview</h1>
+		<p>
+			<strong>⚠️ WARNING ⚠️</strong>
+			<br>
+			Please read
+			<a href="https://github.com/html-preview/html-preview.github.io/blob/d1478a9f702fb28f1295f371e3c87ba4f1b229c2/README.md">the warnings contained here</a>
+		</p>
+		<p>
+			Enter URL of the HTML file to preview:
+			<input type="url" id="file" value="" placeholder="e.g. https://github.com/user/repo/blob/master/index.html" size="60" autofocus>
+			<input type="submit" value="Preview">
+		</p>
+		<p>
+			or prepend to the URL:
+			<code><strong id="service_base">https://html-preview.github.io/?url=</strong>https://github.com/twbs/bootstrap/blob/gh-pages/2.3.2/index.html</code>
+		</p>
+		<p>
+			Contribute on <a href="https://github.com/html-preview/html-preview.github.io">GitHub</a>
+		</p>
+	</form>
+	<script src="htmlpreview.js"></script>
+</body>
+</html>
